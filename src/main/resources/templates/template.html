@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gestion des Parfums</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <!-- jQuery -->
+    <script src="webjars/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script type="text/javascript" src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">Gestion Parfums</a>
+
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" th:href="@{/parfums/Liste}">Accueil</a>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                Parfums
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" th:href="@{/parfums/showCreate}">Ajouter</a>
+                <a class="dropdown-item" th:href="@{/parfums/Liste}">Lister</a>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                [username]
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Login</a>
+                <a class="dropdown-item" href="#">Logout</a>
+                <a class="dropdown-item" href="#">Profile</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<!-- Contenu principal -->
+<div class="container mt-4">
+    <div layout:fragment="content">
+    </div>
+</div>
+
+</body>
+</html>
